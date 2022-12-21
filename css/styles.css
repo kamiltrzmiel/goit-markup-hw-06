@@ -128,12 +128,12 @@ body {
   transition-property: background-color;
   transition-duration: 0.25s;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  border-radius: 50%;
 }
 
 .footer-soc-icon:hover {
   fill: var(--page-color-white);
   background-color: var(--page-color-blue);
-  border-radius: 50%;
 }
 
 /*-----WEBSTUDIO-----*/
@@ -452,11 +452,18 @@ body {
   transition-duration: 0.25s;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
+
+.team-soc-list-item {
+  list-style: none;
+  display: inline-block;
+}
+
 .team-soc-icon {
   fill: var(--page-color-lgrey);
   padding-bottom: 0px;
   transition-duration: 0.25s;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  border-radius: 50%;
 }
 .team-soc-link {
   color: var(--page-color-white);
@@ -465,7 +472,6 @@ body {
 .team-soc-icon:hover {
   fill: var(--page-color-white);
   background-color: var(--page-color-blue);
-  border-radius: 50%;
 }
 
 .team-member:hover,
