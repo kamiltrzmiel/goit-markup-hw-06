@@ -290,7 +290,7 @@ body {
   transition-duration: 2s;
   transition-timing-function: linear;
 }
-.modal-form-title {
+.modal-title {
   font-size: 20px;
   font-weight: 700;
   line-height: 24px;
@@ -299,14 +299,89 @@ body {
   text-align: center;
   padding-top: 40px;
 }
+.modal-form-box {
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 12px 40px 0px 40px;
+}
+
+.modal-form-label {
+  display: block;
+  position: relative;
+  margin-bottom: 10px;
+  color: var(--page-color-grey);
+  font-size: 12px;
+}
+.modal-form-input {
+  display: block;
+  width: 100%;
+  height: 40px;
+  margin-top: 4px;
+  padding-left: 35px;
+  font-size: 12px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  transition-property: border;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.modal-form-input:hover,
+.modal-form-input:active,
+.modal-form-input:focus {
+  border: 1px solid var(--page-color-blue);
+  outline: none;
+}
+.modal-form-textarea {
+  height: 120px;
+  padding: 12px 16px;
+  color: rgba(117, 117, 117, 1);
+  resize: none;
+}
+.modal-form-checkbox {
+  display: block;
+  text-align: center;
+  margin-top: 20px;
+  font-size: 14px;
+}
+.modal-form-link {
+  color: var(--page-color-blue);
+}
+.modbutton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.modbutton-send {
+  margin-top: 30px;
+  width: 200px;
+  height: 50px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--page-color-white);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+
+  background-color: var(--page-color-blue);
+  border: none;
+  border-radius: 4px;
+}
+.modal-form-input .modal-form-textarea > ::placeholder {
+  font-weight: 12px;
+  line-height: 14px;
+  letter-spacing: 0.01em;
+  color: var(--page-color-black);
+}
 .modal-form-icon {
+  position: absolute;
+  margin-top: 30px;
+  margin-left: 15px;
   fill: var(--page-color-black);
   background-color: rgba(255, 255, 255, 0.1);
-  border-radius: 50%;
   transition-property: background-color;
   transition-duration: 0.25s;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  border-radius: 50%;
 }
 
 .backdrop.is-hidden .modal {

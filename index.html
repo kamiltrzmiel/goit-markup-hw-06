@@ -427,12 +427,49 @@
     <div class="backdrop is-hidden" data-modal>
       <div class="modal">
         <button type="button" class="modal-close-btn" data-modal-close>X</button>
-        <div class="modal-form-title">
+        <div class="modal-title">
           <span>Zostaw swoje dane w formularzu poniżej</span>
-          <svg class="modal-form-icon" width="44" height="44">
-            <use href="./images/icons.svg#icon-modal-person"></use>
-          </svg>
         </div>
+        <form class="modal-form-box">
+          <label class="modal-form-label" for="imie">
+            <svg class="modal-form-icon" width="15" height="15">
+              <use href="./images/icons.svg#icon-modal-person" />
+            </svg>
+            Imię
+            <input class="modal-form-input" id="imie" type="text" name="Imie" />
+          </label>
+          <label class="modal-form-label" for="telefon">
+            <svg class="modal-form-icon" width="15" height="15">
+              <use href="./images/icons.svg#icon-modal-phone" />
+            </svg>
+            Telefon
+            <input class="modal-form-input" id="telefon" type="tel" name="Telefon" />
+          </label>
+          <label class="modal-form-label" for="email">
+            <svg class="modal-form-icon" width="15" height="15">
+              <use href="./images/icons.svg#icon-modal-envelope" />
+            </svg>
+            Email
+            <input class="modal-form-input" id="email" type="email" name="Email" />
+          </label>
+          <label class="modal-form-label" for="komentarz">
+            Komentarz
+            <textarea
+              class="modal-form-input modal-form-textarea"
+              id="komentarz"
+              placeholder="Wprowadź tekst"
+            ></textarea>
+          </label>
+          <label class="modal-form-checkbox" for="modcheck">
+            <input class="modal-form-clickbox" type="checkbox" name="Akceptacja" />
+            Oświadczam że akceptuję
+            <a href="#" target="_blank" class="modal-form-link">Regulamin</a> i
+            <a href="#" target="_blank" class="modal-form-link">Politykę Prywatności</a>
+          </label>
+          <div class="modbutton">
+            <button class="modbutton-send" type="submit">Wyślij</button>
+          </div>
+        </form>
       </div>
     </div>
     <script src="./js/modal.js"></script>
