@@ -87,7 +87,7 @@ body {
   color: rgba(255, 255, 255, 0.6);
   text-decoration: none;
   transition-property: color;
-  transition-duration: 0.25s;
+  transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .address-list-item-link:hover,
@@ -126,7 +126,7 @@ body {
   background-color: rgba(255, 255, 255, 0.1);
   border-radius: 50%;
   transition-property: background-color;
-  transition-duration: 0.25s;
+  transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   border-radius: 50%;
 }
@@ -134,6 +134,67 @@ body {
 .footer-soc-icon:hover {
   fill: var(--page-color-white);
   background-color: var(--page-color-blue);
+}
+
+.footer-newsletter {
+  margin-left: 78px;
+}
+.footer-news-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+}
+.footer-newsletter > span {
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 16px;
+  text-transform: uppercase;
+  color: var(--page-color-white);
+  display: inline-block;
+  margin-bottom: 20px;
+}
+.footer-news-email {
+  width: 358px;
+  height: 50px;
+  background-color: var(--page-color-back);
+  color: var(--page-color-white);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+  padding: 15px 16px;
+  transition-property: border;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.footer-news-email:hover,
+.footer-news-email:active,
+.footer-news-email:focus {
+  border: 1px solid var(--page-color-blue);
+  outline: none;
+}
+
+.footer-news-icon {
+  fill: var(--page-color-white);
+  margin-left: 24px;
+}
+
+.newsletter-btn {
+  width: 200px;
+  height: 50px;
+  background-color: var(--page-color-blue);
+  color: var(--page-color-white);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 188%;
+  letter-spacing: 0.06em;
+  padding: 10px 0px;
+  justify-content: center;
+  align-items: ;
+  gap: 24px;
+  cursor: pointer;
 }
 
 /*-----WEBSTUDIO-----*/
@@ -174,7 +235,7 @@ body {
   text-decoration: none;
   color: var(--page-color-black);
   transition-property: color;
-  transition-duration: 0.25s;
+  transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .backlight-item {
@@ -220,7 +281,7 @@ body {
   color: var(--page-color-grey);
   fill: var(--page-color-grey);
   transition-property: color;
-  transition-duration: 0.25s;
+  transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -266,7 +327,7 @@ body {
   background-color: var(--page-color-blue);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   transition-property: color, background-color;
-  transition-duration: 0.25s;
+  transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .motto-button:hover {
@@ -314,6 +375,10 @@ body {
   color: var(--page-color-grey);
   font-size: 12px;
 }
+
+.modal-form-label:hover .modal-form-icon {
+  fill: var(--page-color-blue);
+}
 .modal-form-input {
   display: block;
   width: 100%;
@@ -339,15 +404,56 @@ body {
   color: rgba(117, 117, 117, 1);
   resize: none;
 }
-.modal-form-checkbox {
-  display: block;
-  text-align: center;
+
+.custom-icon-check {
+  cursor: pointer;
+}
+
+.custom-checkbox {
+  position: relative;
+  display: flex;
+  align-items: center;
+
   margin-top: 20px;
   font-size: 14px;
 }
-.modal-form-link {
+
+.custom-checkbox input[type='checkbox'] {
+  background: var(--page-color-white);
+  margin: 0;
+  appearance: none;
+  border: 2px solid var(--page-color-black);
+  width: 19px;
+  height: 20px;
+  border-radius: 4px;
+  margin-right: 8px;
+}
+
+.custom-checkbox .custom-icon-check {
+  position: absolute;
+  top: 50%;
+  left: 2px;
+  transform: translateY(-50%);
+  opacity: 0;
+  width: 15px;
+  height: 16px;
+  transition-property: opacity;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.custom-checkbox input[type='checkbox']:checked + .custom-icon-check {
+  opacity: 1;
+  background-color: var(--page-color-blue);
+  transition-property: opacity;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.checkbox-links {
   color: var(--page-color-blue);
 }
+
 .modbutton {
   display: flex;
   justify-content: center;
@@ -362,7 +468,6 @@ body {
   font-weight: 700;
   color: var(--page-color-white);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-
   background-color: var(--page-color-blue);
   border: none;
   border-radius: 4px;
@@ -379,8 +484,8 @@ body {
   margin-left: 15px;
   fill: var(--page-color-black);
   background-color: rgba(255, 255, 255, 0.1);
-  transition-property: background-color;
-  transition-duration: 0.25s;
+  transition-property: fill;
+  transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -530,7 +635,7 @@ body {
   letter-spacing: 0.03em;
   margin-top: 30px;
   margin-bottom: 10px;
-  transition-duration: 0.25s;
+  transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .team-member-desc {
@@ -542,7 +647,7 @@ body {
   display: inline-block;
   padding-bottom: 16px;
   transition-property: color;
-  transition-duration: 0.25s;
+  transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -554,7 +659,7 @@ body {
 .team-soc-icon {
   fill: var(--page-color-lgrey);
   padding-bottom: 0px;
-  transition-duration: 0.25s;
+  transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   border-radius: 50%;
 }
@@ -610,7 +715,7 @@ body {
 }
 .customer-ico {
   fill: var(--page-color-lgrey);
-  transition-duration: 0.25s;
+  transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -642,7 +747,7 @@ body {
   border-radius: 5px;
   background-color: var(--page-color-team);
   transition-property: background-color;
-  transition-duration: 0.25s;
+  transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .btn:hover {

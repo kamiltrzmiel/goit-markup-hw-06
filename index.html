@@ -422,11 +422,34 @@
             </li>
           </ul>
         </div>
+        <div class="footer-newsletter">
+          <span>Zapisz się do newslettera</span>
+          <form name="footer-news-form" class="footer-news-form">
+            <label>
+              <input
+                type="email"
+                name="footer-news-email"
+                class="footer-news-email"
+                placeholder="E-mail"
+              />
+            </label>
+            <button type="submit" class="newsletter-btn">
+              <span>Zapisz się</span>
+              <svg class="footer-news-icon" width="24" height="24">
+                <use href="./images/icons.svg#icon-footer-send"></use>
+              </svg>
+            </button>
+          </form>
+        </div>
       </div>
     </footer>
     <div class="backdrop is-hidden" data-modal>
       <div class="modal">
-        <button type="button" class="modal-close-btn" data-modal-close>X</button>
+        <button type="button" class="modal-close-btn" data-modal-close>
+          <svg class="modal-close-icon" width="11" height="11">
+            <use href="./images/icons.svg#icon-modal-close" />
+          </svg>
+        </button>
         <div class="modal-title">
           <span>Zostaw swoje dane w formularzu poniżej</span>
         </div>
@@ -460,11 +483,14 @@
               placeholder="Wprowadź tekst"
             ></textarea>
           </label>
-          <label class="modal-form-checkbox" for="modcheck">
-            <input class="modal-form-clickbox" type="checkbox" name="Akceptacja" />
-            Oświadczam że akceptuję
-            <a href="#" target="_blank" class="modal-form-link">Regulamin</a> i
-            <a href="#" target="_blank" class="modal-form-link">Politykę Prywatności</a>
+          <label class="custom-checkbox">
+            <input type="checkbox" />
+            <svg class="custom-icon-check" width="15" height="14">
+              <use href="./images/icons.svg#icon-modal-check" />
+            </svg>
+            Oświadczam że akceptuję&nbsp;<a class="checkbox-links" href="#" target="_blank"
+              >Regulamin&nbsp;</a
+            >i&nbsp;<a class="checkbox-links" href="#" target="_blank">Politykę prywatoności </a>
           </label>
           <div class="modbutton">
             <button class="modbutton-send" type="submit">Wyślij</button>
